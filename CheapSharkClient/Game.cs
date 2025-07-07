@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
-namespace CheapSharkClient
+namespace CheapSharkClient.Models
 {
-    internal class Game
+    public class Game
     {
-        public string cheapest { get; set; } = "";
-        public string external { get; set; } = "";
+        [JsonPropertyName("cheapest")]
+        public string Cheapest { get; set; } = "";
+        
+        [JsonPropertyName("external")]
+        public string External { get; set; } = "";
+        
+        [JsonPropertyName("gameID")]
+        public string GameID { get; set; } = "";
+        
+        [JsonPropertyName("steamAppID")]
+        public string SteamAppID { get; set; } = "";
+        
+        [JsonPropertyName("thumb")]
+        public string Thumb { get; set; } = "";
     }
 }
